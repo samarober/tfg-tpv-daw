@@ -3,8 +3,12 @@ import cors from 'cors';
 import productRoutes from './routes/productRoutes.js';
 
 /**
+ * @typedef {Object} Application
+ */
+
+/**
  * Instancia principal de la aplicación Express.
- * @type {import('express').Application}
+ * @type {Application}
  */
 const app = express();
 const PORT = process.env.PORT || 5000;

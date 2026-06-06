@@ -5,10 +5,14 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 /**
+ * @typedef {Object} Pool
+ * @property {Function} query - Función para ejecutar consultas SQL.
+ */
+
+/**
  * Configuración del Pool de conexiones para PostgreSQL.
- * Gestiona múltiples conexiones simultáneas a la base de datos del TPV.
  * @module dbConfig
- * @type {import('pg').Pool}
+ * @type {Pool}
  */
 const pool = new Pool({
     user: process.env.DB_USER || 'postgres',
