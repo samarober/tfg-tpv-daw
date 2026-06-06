@@ -2,8 +2,13 @@ import express from 'express';
 import { getProducts } from '../controllers/productController.js';
 
 /**
+/**
+ * @typedef {Object} Router
+ */
+
+/**
  * Enrutador de Express para la entidad de Productos.
- * @type {import('express').Router}
+ * @type {Router}
  */
 const router = express.Router();
 
