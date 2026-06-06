@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import productRoutes from './routes/productRoutes.js';
 import saleRoutes from './routes/saleRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 /**
  * @typedef {Object} Application
@@ -20,6 +21,7 @@ app.use(express.json());
 // Enlazamos la ruta /api/products con nuestro archivo de rutas importado
 app.use('/api/products', productRoutes);
 app.use('/api/sales', saleRoutes);
+app.use('/api/users', userRoutes);
 
 /**
  * Inicia el servidor y lo pone a escuchar peticiones en el puerto definido.
