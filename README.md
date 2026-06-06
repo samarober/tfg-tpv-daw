@@ -30,3 +30,52 @@ tpv-proyecto/
 └── frontend/         # Single Page Application (React + Vite)
     ├── src/          # Componentes, Contexto y Vistas
     └── package.json
+
+```
+
+## 🚀 Guía de Instalación y Despliegue Local
+
+Para levantar este proyecto en tu entorno local, asegúrate de tener instalados [Node.js](https://nodejs.org/) y [Docker](https://www.docker.com/).
+
+### 1. Base de Datos (PostgreSQL)
+
+Levanta el contenedor de la base de datos ejecutando el siguiente comando:
+
+```bash
+docker run --name tpv-postgres-db -e POSTGRES_PASSWORD=root -e POSTGRES_USER=postgres -e POSTGRES_DB=tpv_db -p 5432:5432 -d postgres
+
+```
+
+*(Nota: Ejecuta el script DDL incluido en el proyecto para generar la estructura de tablas inicial).*
+
+### 2. Backend (Servidor Node.js)
+
+```bash
+cd backend
+npm install
+npm run dev
+
+```
+
+El servidor de desarrollo se ejecutará en `http://localhost:5000`.
+
+### 3. Frontend (Cliente React)
+
+Abre una nueva terminal y ejecuta:
+
+```bash
+cd frontend
+npm install
+npm run dev
+
+```
+
+La interfaz de usuario estará disponible en `http://localhost:5173`.
+
+## 📄 Documentación del Código
+
+El proyecto sigue el estándar de la industria, utilizando nombres de variables y funciones en inglés, y manteniendo la documentación técnica en español mediante **JSDoc**.
+
+## 👨‍💻 Autor
+
+**Roberto** - *Desarrollador Web Full-Stack*
