@@ -1,0 +1,14 @@
+# Dependencias de Node
+node_modules/
+
+# Archivos de entorno (Contraseñas de la Base de Datos)
+.env
+
+# Archivos de compilación de Vite
+dist/
+build/
+
+# Archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
