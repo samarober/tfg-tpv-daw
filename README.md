@@ -6,6 +6,18 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
+## 🚀 Estado del Proyecto
+
+### Backend (Completado)
+- **Gestión de Usuarios:** Registro e inicio de sesión funcional mediante verificación de PIN.
+- **Transacciones de Venta:** Endpoint `POST /api/sales` con control de concurrencia en base de datos (`FOR UPDATE`) y validación estricta de stock con reversión completa (`ROLLBACK`) en caso de fallo.
+- **Documentación:** API completamente documentada con estándares JSDoc.
+
+### Frontend (En Proceso)
+- **Infraestructura:** Configuración base con Vite + React y sistema de enrutamiento con rutas protegidas.
+- **Estilos:** Integración y configuración de Tailwind CSS.
+- **Autenticación:** Vista de Login interactiva implementada con teclado numérico táctil y conexión real con la API.
+
 Este proyecto es una solución integral de Terminal de Punto de Venta (TPV) diseñada como Trabajo Final de Grado (TFG) para el Ciclo Superior de Desarrollo de Aplicaciones Web (DAW). 
 
 El sistema permite gestionar ventas en tiempo real, controlar el stock del catálogo y administrar tickets mediante una arquitectura desacoplada y robusta.
