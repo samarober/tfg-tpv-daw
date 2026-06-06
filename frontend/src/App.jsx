@@ -16,17 +16,22 @@ import ProtectedRoute from './components/ProtectedRoute.jsx';
 export default function App() {
   return (
     <Router>
-      <Navbar />
-      <div style={{ padding: '20px' }}>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          
-          {/* Rutas protegidas que requieren autenticación */}
-          <Route element={<ProtectedRoute />}>
-            <Route path="/" element={<Terminal />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Route>
-        </Routes>
+      {/* Contenedor principal de la aplicación con un fondo gris claro usando Tailwind */}
+      <div className="min-h-screen bg-gray-100">
+        <Navbar />
+        
+        {/* Usamos Tailwind en lugar de style={{ padding: '20px' }} */}
+        <main className="p-5">
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            
+            {/* Rutas protegidas que requieren autenticación */}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/" element={<Terminal />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
+          </Routes>
+        </main>
       </div>
     </Router>
   );
